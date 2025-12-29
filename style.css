@@ -1,0 +1,316 @@
+  /* 🌟 Root Colors */
+  :root {
+    --emerald-green: #30c4d8;
+    /* Emerald Metallic */
+    --black: #000000;
+    --white: #fff;
+    --card-bg: #1a1a1a;
+    --text-dark: #111;
+    --text-light: #ffffff;
+  }
+
+  /* 🌟 Animated Gradient Background */
+  body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #dde02767, #2aeeee, #27e0e07e, #dde02767);
+    background-size: 300% 300%;
+    animation: gradientShift 35s  infinite;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--emerald-green);
+    color: var(--white);
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  .profile-detail {
+    align-items: center;
+    text-align: justify;
+  }
+
+  .card {
+    text-align: center;
+    text-align: justify;
+  }
+
+  /* 🔘 Toggle Button */
+  .toggle-btn {
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+
+  .toggle-btn:hover {
+    background: var(--emerald-green);
+    color: var(--black);
+    transform: rotate(15deg);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+
+  /* 🌟 General Cards */
+  .card,
+  .flip-card {
+    background: var(--card-bg);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+
+  .skill:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease-out;
+    color: #FFD700;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .profile img {
+    width: 120px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--emerald-green);
+    object-fit: cover;
+  }
+
+  /* card skills */
+
+  .card-skills {
+    color: #FFD700;
+  }
+
+  .skills .skill {
+    margin-bottom: 1rem;
+  }
+
+  .skill-bar {
+    background: #333;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .skill-bar div {
+    height: 18px;
+    background: var(--emerald-green);
+    text-align: right;
+    padding-right: 5px;
+    color: #fff;
+    font: bold;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--black);
+    color: var(--white);
+  }
+
+  /* 🌙 Dark Mode */
+  body.dark {
+    background: linear-gradient(135deg, #0a0a0a, #1d1d1d, #111);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
+    color: var(--text-light);
+  }
+
+  body.dark header {
+    background: var(--black);
+    color: var(--emerald-green);
+  }
+
+  body.dark .flip-card-front,
+  .projects-title {
+    background: #000000;
+  }
+
+  body.dark .card {
+    background: #000000;
+    color: var(--white);
+  }
+
+  body.dark .toggle-btn {
+    background: var(--emerald-green);
+    color: var(--black);
+  }
+
+  /* 📌 Projects Flip Card */
+  .flip-card {
+    perspective: 1000px;
+    max-width: 400px;
+    height: 200px;
+    margin: 2rem auto;
+    position: relative;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); */
+  }
+
+  /* Front */
+  .flip-card-front {
+    background: var(--card-bg);
+    color: #fff;
+    flex-direction: column;
+  }
+
+  .projects-title {
+    color: #FFD700;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Back */
+  .flip-card-back {
+    /* background: #111; */
+    color: #fff;
+    transform: rotateY(180deg);
+    flex-direction: column;
+  }
+
+  .flip-card-back h2 {
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .flip-card-back ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .flip-card-back li {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+  }
+
+  /* 🌟 Project Link Styling */
+  .flip-card-back .project-link {
+    color: #ffffff;
+    /* white by default */
+    text-decoration: none;
+    /* no underline */
+    display: inline-block;
+    /* makes hover area include emoji */
+    transition: color 0.3s ease;
+    /* smooth color fade */
+  }
+
+  .flip-card-back .project-link:hover {
+    color: #FFD700;
+    /* gold yellow on hover */
+  }
+.footer {
+  background: #000;
+  color: white;
+  padding: 10px 0;     /* small height */
+  text-align: center;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;           /* space between items */
+  flex-wrap: wrap;     /* stays responsive */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  top: -2px;
+  width: 20px;
+  height: 20px;
+}
+.social {
+  display: flex;
+  gap: 20px;
+}
+
+.copy {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <button class="toggle-btn" onclick="toggleTheme()">
+      <i id="theme-icon" class="fa-solid fa-moon"></i> <!-- Default Icon -->
+    </button>
+  </header>
+
+  <div class="container">
+    <!-- Profile Card -->
+    <div class="card profile">
+      <img src="profile pic.png" alt="My Image">
+      <div>
+        <h2>Haris Sultan</h2>
+        <p>Working Time: <strong>2 year Experience</strong></p>
+        <p>Projects Completed: <strong>8+</strong></p>
+      </div>
+    </div>
+
+
+    <!-- Projects Flip Card -->
+    <div class="card flip-card">
+      <div class="flip-card-inner">
+        <!-- Front Side -->
+        <div class="flip-card-front">
+          <h2 class="projects-title">Projects</h2>
+          <p>Hover to see my work</p>
+        </div>
+        <!-- Back Side -->
+        <div class="flip-card-back">
+          <h3 class="project-title">My Projects</h3>
+          <ul>
+            <li><a href="https://github.com/HarisSultan01/C-Projects" class="project-link">🚀 C++ Recipe Management
+                System</a></li>
+            <li><a href="https://github.com/HarisSultan01/Projects" class="project-link">📊 webstore + youtube
+                Dashboard</a></li>
+            <li><a href="https://github.com/HarisSultan01/Licence-plate-detection" class="project-link">🧩 (Python)
+                Licence plate detector </a></li>
+            <li><a href="https://github.com/HarisSultan01/WEB-dev-project" class="project-link">🗂️ Database
+                Normalization Tool</a></li>
+            <!-- <li><a href="https://www.youtube.com/@pro_ahmadyt" class="project-link">🎮 PUBG Emulator Gameplay
+                Channel</a></li> -->
+            <li><a href="#" class="project-link">🕹️Unreal Engine Game development (available in some days)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Skills Card -->
+    <div class="card skills">
+      <h2>My Skills</h2>
+      <div class="skill">
+        <p>C++</p>
+        <div class="skill-bar">
+          <div style="width: 95%;">95%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>React.js</p>
+        <div class="skill-bar">
+          <div style="width: 80%;">80%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>SQL / Databases</p>
+        <div class="skill-bar">
+          <div style="width: 80%;">80%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>Web Design</p>
+        <div class="skill-bar">
+          <div style="width: 80%;">80%</div>
+        </div>
+      </div>
+      <div class="skill">
+        <p>Python</p>
+        <div class="skill-bar">
+          <div style="width: 90%;">90%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Card -->
+    <div class="card">
+      <h2>About My Projects</h2>
+      <p>I have built various projects ranging from system development, databases, and modern frontend UIs. My portfolio
+        includes interactive websites, game dashboards, and backend services.</p>
+    </div>
+    <div class="about-me">
+
+    </div>
+    <div class="profile-detail">
+      <h2>About me:</h2>
+      <strong>
+        <p>I am a Bachelor of Computer Science student at the University of Central Punjab (UCP), currently in my 5th
+          semester. I
+          have successfully completed my first four semesters with a cumulative CGPA of 3.7 and achieved a GPA of 3.83
+          in my
+          most recent semester. Throughout my studies, I have completed all subject-related projects with dedication and
+          creativity, demonstrating strong problem-solving and programming skills. Several of these projects are
+          showcased in my portfolio, highlighting my growing expertise and passion for technology, software development,
+          and
+          innovation.
+        </p>
+      </strong>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-main">
+      <div class="item">
+        <img src="phone.png" class="icon" alt="">
+        <span>+92318-6210665</span>
+      </div>
+
+      <div class="item">
+        <img src="email.png" class="icon" alt="">
+        <span>chharissultan682@gmail.com</span>
+      </div>
+
+      <div class="social">
+        <div class="item">
+          <a href="https://github.com/HarisSultan01">
+          <img src="linkedin.png" class="icon" alt=""></a>
+          <span>LinkedIn</span>
+        </div>
+
+        <div class="item">
+          <a href="https://github.com/HarisSultan01">
+            <img src="github.png" class="icon" alt="">
+          </a>
+          <span>GitHub</span>
+        </div>
+      </div>
+
+      <p class="copy">© 2025 My Portfolio. All Rights Reserved.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
