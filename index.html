@@ -31,76 +31,118 @@
 
 
     <!-- Projects Flip Card -->
-    <div class="card flip-card">
-      <div class="flip-card-inner">
-        <!-- Front Side -->
-        <div class="flip-card-front">
-          <h2 class="projects-title">Projects</h2>
-          <p>Hover to see my work</p>
+    <div class="projects-section">
+      <h2>My Projects</h2>
+      <br>
+      <div class="projects-container">
+        <!-- Single Project Card -->
+        <div class="project-card">
+          <img src="recipe.jpg" alt="Project 1">
+          <div class="project-info">
+            <h3>Recipe Management System</h3>
+            <p>🚀 C++ Terminal App</p>
+            <a href="https://github.com/HarisSultan01/C-Projects" class="btn">View Project</a>
+          </div>
         </div>
-        <!-- Back Side -->
-        <div class="flip-card-back">
-          <h3 class="project-title">My Projects</h3>
-          <ul>
-            <li><a href="https://github.com/HarisSultan01/C-Projects" class="project-link">🚀 C++ Recipe Management
-                System</a></li>
-            <li><a href="https://github.com/HarisSultan01/Projects" class="project-link">📊 webstore + youtube
-                Dashboard</a></li>
-            <li><a href="https://github.com/HarisSultan01/Licence-plate-detection" class="project-link">🧩 (Python)
-                Licence plate detector </a></li>
-            <li><a href="https://github.com/HarisSultan01/WEB-dev-project" class="project-link">🗂️ Database
-                Normalization Tool</a></li>
-            <!-- <li><a href="https://www.youtube.com/@pro_ahmadyt" class="project-link">🎮 PUBG Emulator Gameplay
-                Channel</a></li> -->
-            <li><a href="#" class="project-link">🕹️Unreal Engine Game development (available in some days)</a></li>
-          </ul>
+
+        <div class="project-card">
+          <img src="webstore.jpg" alt="Project 2">
+          <div class="project-info">
+            <h3>Webstore + Dashboard</h3>
+            <p>📊 React + Web</p>
+            <a href="https://github.com/HarisSultan01/Projects" class="btn">View Project</a>
+          </div>
         </div>
+
+        <div class="project-card">
+          <img src="licence_plate.jpg" alt="Project 3">
+          <div class="project-info">
+            <h3>Licence Plate Detector</h3>
+            <p>🧩 Python + OpenCV</p>
+            <a href="https://github.com/HarisSultan01/Licence-plate-detection" class="btn">View Project</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="show-more">
+        <a href="project.html" class="btn">Show More Projects</a>
       </div>
     </div>
-    <!-- Skills Card -->
     <div class="card skills">
       <h2>My Skills</h2>
-      <div class="skill">
-        <p>C++</p>
+
+      <div class="skill" data-level="85">
+        <p>C++ <span class="percent"></span></p>
         <div class="skill-bar">
-          <div style="width: 95%;">95%</div>
+          <div class="fill"></div>
         </div>
       </div>
-      <div class="skill">
-        <p>React.js</p>
+
+      <div class="skill" data-level="80">
+        <p>React.js <span class="percent"></span></p>
         <div class="skill-bar">
-          <div style="width: 80%;">80%</div>
+          <div class="fill"></div>
         </div>
       </div>
-      <div class="skill">
-        <p>SQL / Databases</p>
+
+      <div class="skill" data-level="80">
+        <p>SQL / Databases <span class="percent"></span></p>
         <div class="skill-bar">
-          <div style="width: 80%;">80%</div>
+          <div class="fill"></div>
         </div>
       </div>
-      <div class="skill">
-        <p>Web Design</p>
+
+      <div class="skill" data-level="80">
+        <p>Web Design <span class="percent"></span></p>
         <div class="skill-bar">
-          <div style="width: 80%;">80%</div>
+          <div class="fill"></div>
         </div>
       </div>
-      <div class="skill">
-        <p>Python</p>
+
+      <div class="skill" data-level="90">
+        <p>Python <span class="percent"></span></p>
         <div class="skill-bar">
-          <div style="width: 90%;">90%</div>
+          <div class="fill"></div>
         </div>
       </div>
+
     </div>
 
-    <!-- Projects Card -->
-    <div class="card">
+
+   
+
+    <div class="contact-section">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" required title="Enter a valid phone number">
+
+        <label for="purpose">Purpose:</label>
+        <textarea id="purpose" name="purpose" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="statusMessage"></p>
+    </div>
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span id="popup-close" class="popup-close">&times;</span>
+    <p id="popup-message"></p>
+  </div>
+</div>
+ <!-- Projects Card -->
+    <!-- <div class="card">
       <h2>About My Projects</h2>
       <p>I have built various projects ranging from system development, databases, and modern frontend UIs. My portfolio
         includes interactive websites, game dashboards, and backend services.</p>
-    </div>
-    <div class="about-me">
-
-    </div>
+    </div> --> 
     <div class="profile-detail">
       <h2>About me:</h2>
       <strong>
@@ -133,7 +175,7 @@
       <div class="social">
         <div class="item">
           <a href="https://github.com/HarisSultan01">
-          <img src="linkedin.png" class="icon" alt=""></a>
+            <img src="linkedin.png" class="icon" alt=""></a>
           <span>LinkedIn</span>
         </div>
 
@@ -148,7 +190,7 @@
       <p class="copy">© 2025 My Portfolio. All Rights Reserved.</p>
   </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 
